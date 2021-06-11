@@ -15,7 +15,7 @@ class App extends Component {
             sortedBeacons: {},
             knownBeacons: [],
             esps: {
-                '84:cc:a8:5a:61:8c': {x: 0, y: 0}, // 4 accedent
+                '84:cc:a8:5a:61:8c': {x: 0, y: 0}, // 4 cut
                 '3c:61:05:13:de:c0': {x: 0, y: 1000}, // 3 on bard with arduino
                 '3c:61:05:13:e4:08': {x: 1530, y: 0}, // 1 loos
                 '3c:61:05:13:e2:18': {x: 1530, y: 1000}, // 2 on board with lamps
