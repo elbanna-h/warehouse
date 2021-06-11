@@ -23,7 +23,7 @@ class App extends Component {
             visible: false,
             width: 1600,
             height: 1200,
-            widthMeters: 160, // the width of the warehouse
+            widthMeters: 8.5, // the width of the warehouse
             orderBeacons: []
         }
     }
