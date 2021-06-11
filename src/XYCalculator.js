@@ -6,8 +6,7 @@ export const myPlace  = (beacon, esps, px_meter) => {
         let power = -59; //tx power
         let noise = 3; //noise from 2 to 4
         let distance = Math.pow(10, ((power-rssi) / (10*noise)) );
-        // return distance * px_meter;
-        return distance;
+        return distance * px_meter;
     }
 
     let sortedKeys = Object.keys(esps).sort(function (a, b) {
