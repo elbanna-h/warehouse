@@ -42,7 +42,7 @@ class Warehouse extends React.Component {
     }
 
     productPos = function (p) {
-        console.log(p)
+        // console.log(p)
         let espsData = this.props.esps
         espsData[p.mac] = {
             x: p.x,
@@ -80,6 +80,7 @@ class Warehouse extends React.Component {
         let beaconIcons
         // Products
         let espsData = this.props.esps
+        console.log('esps: ' + Object.keys(this.props.esps))
         console.log('Hany Warehouse, num esps: ' + Object.keys(this.props.esps).length)
         if (Object.keys(this.props.esps).length >= 3) {
             espIcons = Object.keys(espsData).map(key =>
@@ -87,7 +88,7 @@ class Warehouse extends React.Component {
                          setESPPosiotion={this.productPos.bind(this)}></Product>
             )
         }
-        console.log(this.props.esps) //for debug
+        // console.log(this.props.esps) //for debug
         // Beacons
         this.updateBeaconPositions()
         if (Object.keys(this.beaconXYs).length > 0) {
@@ -95,7 +96,7 @@ class Warehouse extends React.Component {
                 key === 'dd:33:16:00:03:4a' ?
                     <Man key={key} mac={key} x={this.beaconXYs[key].x} y={this.beaconXYs[key].y}/>
                     :
-                    this.state.orderBeacons.map(orderBeacon => orderBeacon.beacon == key && <Pin key={key} mac={key} x={this.beaconXYs[key].x} y={this.beaconXYs[key].y}></Pin>)
+                    this.state.orderBeacons.map(orderBeacon => orderBeacon.beacon === key && <Pin key={key} mac={key} x={this.beaconXYs[key].x} y={this.beaconXYs[key].y}></Pin>)
             )
         }
         return (
