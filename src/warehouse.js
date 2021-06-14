@@ -31,7 +31,7 @@ class Warehouse extends React.Component {
         const id = this.props.match.params.id;
         const config = {
             headers: {
-                Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjIzNTIwMjgyLCJqdGkiOiJjYjBmNmQzN2NhYTk0YzJlYTA0MmYzM2ViZGJlMTE5ZCIsInVzZXJfaWQiOjF9.hzMAcQ7LwSZn6xCTC2qTRh6ankb8QGEaL4_0AfpGt8U`
+                Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI0MjU5NDM2LCJqdGkiOiJmMDRhOTA2ODNiY2U0NWZmOWZiOTc4YjRiOWExZDAwOSIsInVzZXJfaWQiOjF9.5m4ek7FnhFGtqxHpUypfmxUjVXJezgQ_67MeBua1zNc`
             }
         }
         axios.get(`https://ecom360.herokuapp.com/api/orders/${id}/`, config)
